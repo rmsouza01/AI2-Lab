@@ -1,9 +1,11 @@
 #!/bin/bash
-#SBATCH --ntasks=1           # number of MPI processes
-#SBATCH --mem-per-cpu=4GB    # memory; default unit is megabytes
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --partition=cpu2019,cpu2021
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=0-24:00       # time (DD-HH:MM)
 #SBATCH --output=freesurfer_cs.%A_%a.out
-
 
 
 # Adapt the script to your needs according to the comments in this script. Actionable items are all in UPPER CASE

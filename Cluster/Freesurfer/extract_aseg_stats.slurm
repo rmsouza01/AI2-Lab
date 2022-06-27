@@ -1,7 +1,10 @@
 #!/bin/bash
-#SBATCH --ntasks=1           # number of MPI processes
-#SBATCH --mem-per-cpu=4GB    # memory; default unit is megabytes
-#SBATCH --time=0-2:00       # time (DD-HH:MM)
+SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --partition=cpu2019,cpu2021
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+##SBATCH --time=0-2:00       # time (DD-HH:MM)
 #SBATCH --output=aseg_cs.%A_%a.out
 
 
