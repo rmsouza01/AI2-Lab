@@ -2,6 +2,9 @@
 *.nii.gz
 *.nii
 
+# data fodlers
+Freesurfer/Scans
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
